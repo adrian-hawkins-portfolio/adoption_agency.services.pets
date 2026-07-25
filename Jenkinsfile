@@ -1,7 +1,13 @@
 @Library('jenkins-shared-library') _
 
-buildService(
-    pyprojectPath: 'pyproject.toml',
-    dockerfilePath: 'Dockerfile',
-    imageName: 'services-pets'
+buildPythonAndDocker(
+
+    pythonProjects: [
+        [path: 'pyproject.toml',   name: 'pet-service']
+    ],
+
+    dockerProjects: [
+        [path: 'Dockerfile',   name: 'pet-service'],
+        [path: 'database/Dockerfile',   name: 'pet-database'],
+    ]
 )
