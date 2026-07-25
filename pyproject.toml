@@ -5,16 +5,15 @@ description = ""
 authors = [
     {name = "Your Name",email = "you@example.com"}
 ]
-requires-python = ">=3.14"
-dependencies = [
-    "petstore-libs (>=0.1.0,<0.2.0)"
-]
+requires-python = ">=3.13"
 
 [[tool.poetry.source]]
-name = "local"
-url = "http://localhost/simple"
+name = "azure"
+url = "https://pkgs.dev.azure.com/adrianhawkinsportfolio/adrian-hawkins-portfolio/_packaging/adoption-agency/pypi/simple/"
 priority = "primary"
 
+[tool.poetry.dependencies]
+adoptioin-agency-libs = {version = "^3", source = "azure"}
 [tool.poetry]
 packages = [{include = "pet_service", from = "src"}]
 
