@@ -1,10 +1,10 @@
 @Library('jenkins-shared-library') _
 
-pythonPipeline(
+buildPython(
     pyprojectPath: 'pyproject.toml'
 )
 
-dockerPipeline(
+buildDocker(
     dockerfilePath: 'Dockerfile',
     imageName: 'services-pets'
 )
