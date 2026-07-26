@@ -2,9 +2,9 @@
 
 buildService(
 
-    // pythonProjects: [
-    //     [path: 'pyproject.toml',   name: 'pet-service']
-    // ],
+    pythonProjects: [
+        [path: 'pyproject.toml',   name: 'pet-service']
+    ],
 
     dockerProjects: [
         [path: '.', name: 'pet-service', isPod: true],
