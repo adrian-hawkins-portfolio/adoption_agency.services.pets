@@ -13,7 +13,7 @@ url = "https://pkgs.dev.azure.com/adrianhawkinsportfolio/adrian-hawkins-portfoli
 priority = "primary"
 
 [tool.poetry.dependencies]
-adoptioin-agency-libs = {version = "^4", source = "azure"}
+adoption-agency-common = {version = "^5", source = "azure"}
 [tool.poetry]
 packages = [{ include = "pet_service", from = "src" }]
 
