@@ -7,7 +7,7 @@ buildService(
     // ],
 
     dockerProjects: [
-        [path: 'Dockerfile', name: 'pet-service', isPod: true],
-        [path: 'database/Dockerfile', name: 'pet-database', isPod: true],
+        [path: '.', name: 'pet-service', isPod: true],
+//         [path: 'database/Dockerfile', name: 'pet-database', isPod: true],
     ]
 )
