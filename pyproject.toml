@@ -15,7 +15,7 @@ priority = "primary"
 [tool.poetry.dependencies]
 adoptioin-agency-libs = {version = "^4", source = "azure"}
 [tool.poetry]
-packages = [{include = "pet_service"}]
+packages = [{ include = "pet_service", from = "src" }]
 
 [tool.poetry.scripts]
 pet-service = "pet_service.main:main"
