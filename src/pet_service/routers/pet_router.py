@@ -1,7 +1,7 @@
 from typing import Any
 
-from petstore_common import BOARouter
-from petstore_common import logger
+from adoption_agency_common import BOARouter
+from adoption_agency_common import logger
 
 pet_router = BOARouter()
 

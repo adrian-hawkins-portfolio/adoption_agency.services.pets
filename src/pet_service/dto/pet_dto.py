@@ -1,4 +1,4 @@
-from petstore_common import BaseModel
+from adoption_agency_common import BaseModel
 
 from enum import Enum
 
