@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "Your Name",email = "you@example.com"}
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 
 [[tool.poetry.source]]
 name = "azure"
@@ -13,12 +13,13 @@ url = "https://pkgs.dev.azure.com/adrianhawkinsportfolio/adrian-hawkins-portfoli
 priority = "primary"
 
 [tool.poetry.dependencies]
-adoption-agency-common = {version = "^5", source = "azure"}
+adoption-agency-common = {version = "^6", source = "azure"}
 [tool.poetry]
 packages = [{ include = "pet_service", from = "src" }]
 
 [tool.poetry.scripts]
-pet-service = "pet_service.main:main"
+pet-service = "pet_service.pet_http_service.py:main"
+pet-node = "pet_service.pet_node.py:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
