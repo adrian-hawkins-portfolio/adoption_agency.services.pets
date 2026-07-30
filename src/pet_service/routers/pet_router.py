@@ -17,6 +17,6 @@ async def get_pets() -> AllPetsResponse:
     return res
 
 @pet_router.post("/pets")
-def get_2_pets(body: ) -> Any:
+def get_2_pets(body: Any) -> Any:
     logger.debug("Fetching all pets")
     return ["1","2"]

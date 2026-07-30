@@ -17,4 +17,4 @@ class PetModel(BaseModel):
 class AllPetsResponse(BaseModel):
     pets: List[PetModel]
 
-class CreatePetRequest(BaseModel):
+# class CreatePetRequest(BaseModel):
