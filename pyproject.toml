@@ -18,8 +18,8 @@ adoption-agency-common = {version = "^6", source = "azure"}
 packages = [{ include = "pet_service", from = "src" }]
 
 [tool.poetry.scripts]
-pet-service = "pet_service.pet_http_service.py:main"
-pet-node = "pet_service.pet_node.py:main"
+pet-service = "pet_service.pet_http_service:main"
+pet-node = "pet_service.pet_node:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
