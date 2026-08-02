@@ -14,7 +14,7 @@ outgoing_messages = [
 
 app = BOAFastApi(SagaNode(handlers=handlers, outgoing_messages=outgoing_messages))
 def main():
-    app.run()
+    app.run(port=8081)
 
 if __name__ == "__main__":
     main()

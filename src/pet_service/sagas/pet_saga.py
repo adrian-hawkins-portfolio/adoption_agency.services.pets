@@ -22,6 +22,6 @@ class PetSaga(SagaBase):
             val = AllPetsResponse(
                 pets=[PetModel.model_validate(pet) for pet in orm_pets]
             )
-            msg = PetHttpResponse(payload=val.model_dump())
-            logger.debug(f"Processing messsage with payload: {msg.payload}")
-            await self.send_message(msg)
+            resp_msg = PetHttpResponse(payload=val.model_dump(), existing_message=msg)
+            logger.debug(f"Processing messsage with payload: {resp_msg.payload}")
+            await self.send_message(resp_msg)
