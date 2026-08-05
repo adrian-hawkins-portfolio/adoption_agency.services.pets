@@ -6,6 +6,7 @@ from pet_service.dto.pet_dto import Species, Status
 
 
 class PetModel(BaseModel):
+    id: int
     name: str
     image: str
     species: Species
@@ -17,4 +18,9 @@ class PetModel(BaseModel):
 class AllPetsResponse(BaseModel):
     pets: List[PetModel]
 
-# class CreatePetRequest(BaseModel):
+class CreatePetRequest(BaseModel):
+    name: str
+    image: str
+    species: Species
+    description: str
+

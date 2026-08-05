@@ -1,15 +1,22 @@
 from adoption_agency_common import BOAFastApi
 from adoption_agency_common.saga_manager.saga_node import SagaNode
 from pet_service.http_sagas.pet_http_saga import PetHttpSaga
-from pet_service.messages.pet_messages import GetPets
+from pet_service.messages.pet_messages import GetPets, GetPetById, UpdatePetStatusById, CreatePet, ReservePet, \
+    DeletePetById
 from pet_service.routers.pet_router import pet_router
 
 handlers = [
     PetHttpSaga
 ]
 
+
 outgoing_messages = [
-    GetPets
+    GetPets,
+    GetPetById,
+    UpdatePetStatusById,
+    CreatePet,
+    ReservePet,
+    DeletePetById
 ]
 
 app = BOAFastApi(SagaNode(handlers=handlers, outgoing_messages=outgoing_messages))
